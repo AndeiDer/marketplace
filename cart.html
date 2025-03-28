@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Магазин Електроніки</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+            
+                <li><a href="profile.html">Особистий кабінет</a></li>
+                <li><a href="cart.html">Кошик</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Кошик</h2>
+            <div class="cart-items">
+            </div>
+        
+            <div class="cart-total">
+                <p>Загальна вартість: <span id="total-price">0</span> грн</p>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div style="display: flex;">
+                        <button class="clear-cart">Очистити все</button>
+                        <button class="checkout">Оформити замовлення</button>
+                    </div>
+                    <div class="promo-code">
+                        <input type="text" id="promo-code-input" placeholder="Введіть промокод">
+                        <button id="apply-promo-code">Застосувати</button>
+                        <p id="promo-code-message"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Наші соцмережі</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="images/facebook.webp" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.webp" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/instagram.webp" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="images/youtube.webp" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Наші контакти</h3>
+                <p>Адреса: вул. Прикладна, 123, м. Київ, 02000</p>
+                <p>Телефон: +38 (044) 123-45-67</p>
+            </div>
+            <div class="footer-section">
+                <h3>Емейл</h3>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Про нас</h3>
+                <p>Ми - магазин електроніки, який пропонує широкий асортимент товарів за вигідними цінами. Наша мета - забезпечити клієнтів якісною продукцією та відмінним сервісом.</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Магазин Електроніки</p>
+    </footer>
+
+
+    <script src="cart.js"></script>
+</body>
+</html>
+
+
+

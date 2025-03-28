@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Магазин Електроніки</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="profile.html">Особистий кабінет</a></li>
+                <li><a href="cart.html">Кошик</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h3>Категорії</h3>
+                    <select id="category-filter">
+                        <option value="all">Усі товари</option>
+                        <option value="smartphone">Смартфони</option>
+                        <option value="laptop">Ноутбуки</option>
+                        <option value="tv">Телевізори</option>
+                    </select>
+                </div>
+                <div class="filter-section">
+                    <h3>Сортування за ціною</h3>
+                    <select id="price-sort">
+                        <option value="asc">За спаданням ціни</option>
+                        <option value="desc">За зростанням ціни</option>
+                    </select>
+                </div>
+            </aside>
+            <main class="product-list"></main>
+        </div>
+        
+        <div id="product-details" class="modal">
+            <div class="modal-content">
+                <span class="close-details">&times;</span>
+                <div id="product-details-content">
+                </div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Наші соцмережі</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="images/facebook.webp" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.webp" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/instagram.webp" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="images/youtube.webp" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Наші контакти</h3>
+                <p>Адреса: вул. Прикладна, 123, м. Київ, 02000</p>
+                <p>Телефон: +38 (044) 123-45-67</p>
+            </div>
+            <div class="footer-section">
+                <h3>Емейл</h3>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Про нас</h3>
+                <p>Ми - магазин електроніки, який пропонує широкий асортимент товарів за вигідними цінами. Наша мета - забезпечити клієнтів якісною продукцією та відмінним сервісом.</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Магазин Електроніки</p>
+    </footer>
+
+    <script src="catalog.js"></script>
+</body>
+</html>

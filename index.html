@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Магазин Електроніки</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                
+                <li><a href="profile.html">Особистий кабінет</a></li>
+                <li><a href="cart.html">Кошик</a></li>
+                <a href="login.html">Вхід</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slider-item">
+                <picture>
+                    <source srcset="images/slide1-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="images/slide1-medium.jpg" media="(min-width: 768px)">
+                    <img src="images/slide1-small.jpg" alt="Слайд 1">
+                </picture>
+            </div>
+            <div class="slider-item">
+                <picture>
+                     <source srcset="images/slide2-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="images/slide2-medium.jpg" media="(min-width: 768px)">
+                    <img src="images/slide2-small.jpg" alt="Слайд 2">
+                </picture>
+            </div>
+            <div class="slider-item">
+                 <picture>
+                    <source srcset="images/slide3-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="images/slide3-medium.jpg" media="(min-width: 768px)">
+                    <img src="images/slide3-small.jpg" alt="Слайд 3">
+                </picture>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            
+                <h2>Рекомендовані товари</h2>
+                <div id="recommended-products" class="product-list">
+                    </div>
+            </section>
+            <div class="category-list">
+                <h2>Категорії товарів</h2>
+                <div class="category-items">
+                    <a href="catalog.html?category=smartphone">
+                        <img src="images/smartphone-category.jpg" alt="Смартфони">
+                        <span>Смартфони</span>
+                    </a>
+                    <a href="catalog.html?category=laptop">
+                        <img src="images/laptop-category.jpg" alt="Ноутбуки">
+                        <span>Ноутбуки</span>
+                    </a>
+                    <a href="catalog.html?category=tv">
+                        <img src="images/tv-category.jpg" alt="Телевізори">
+                        <span>Телевізори</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="product-details" class="product-details-modal">
+            <div class="product-details-content">
+                <span class="close-details">&times;</span>
+                <div id="product-details-content"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Наші соцмережі</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="images/facebook.webp" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="images/twitter.webp" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/instagram.webp" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="images/youtube.webp" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Наші контакти</h3>
+                <p>Адреса: вул. Прикладна, 123, м. Київ, 02000</p>
+                <p>Телефон: +38 (044) 123-45-67</p>
+            </div>
+            <div class="footer-section">
+                <h3>Емейл</h3>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Про нас</h3>
+                <p>Ми - магазин електроніки, який пропонує широкий асортимент товарів за вигідними цінами. Наша мета - забезпечити клієнтів якісною продукцією та відмінним сервісом.</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Магазин Електроніки</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
