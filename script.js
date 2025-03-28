@@ -28,6 +28,23 @@ productItem.innerHTML = `
     <button class="view-details" data-id="${product.id}">Детальніше</button>
     <button class="add-to-cart" data-id="${product.id}">Додати в кошик</button>
 `;
+
+
+        // Переносимо код для створення imageContainer всередину циклу
+        const imageContainer = document.createElement('div');
+        imageContainer.style.width = '300px';
+        imageContainer.style.height = '300px';
+        imageContainer.style.overflow = 'hidden';
+
+        const img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.name;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
+
+        imageContainer.appendChild(img);
+
 productList.appendChild(productItem);
 });
 
