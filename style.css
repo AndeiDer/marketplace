@@ -763,3 +763,45 @@ footer li {
         font-size: 0.8em;
     }
 }
+
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.nav-links.show {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 101 !important; /* Додаємо !important; */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
