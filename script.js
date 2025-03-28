@@ -1,8 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const productList = document.querySelector('.product-list');
+    const productList = document.querySelector('#recommended-products');
     const productDetailsModal = document.getElementById('product-details');
-    const productDetailsContent = document.getElementById('product-details-content');
+    const productDetailsContent = document.getElementById('product-details-content-inner');
     const closeDetails = document.querySelector('.close-details');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('show');
+        });
+    }
+
+
 
     const featuredProducts = [
         { id: 1, name: 'Смартфон 1', price: 500, image: 'images/smartphone1.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.' },
