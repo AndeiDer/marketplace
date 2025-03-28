@@ -781,7 +781,7 @@ footer li {
     z-index: 100;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 469px) {
     .nav-links {
         display: flex;
         flex-direction: row;
@@ -800,7 +800,7 @@ footer li {
     z-index: 101 !important; /* Додаємо !important; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
     .menu-toggle {
         display: block;
     }
