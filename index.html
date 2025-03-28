@@ -10,17 +10,16 @@
     <header>
         <nav>
             <div class="logo">Магазин Електроніки</div>
+            <div class="menu-toggle">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
-                
                 <li><a href="profile.html">Особистий кабінет</a></li>
                 <li><a href="cart.html">Кошик</a></li>
-                <a href="login.html">Вхід</a>
+                <li><a href="login.html">Вхід</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="slider">
             <div class="slider-item">
@@ -32,49 +31,44 @@
             </div>
             <div class="slider-item">
                 <picture>
-                     <source srcset="images/slide2-large.jpg" media="(min-width: 1200px)">
+                    <source srcset="images/slide2-large.jpg" media="(min-width: 1200px)">
                     <source srcset="images/slide2-medium.jpg" media="(min-width: 768px)">
                     <img src="images/slide2-small.jpg" alt="Слайд 2">
                 </picture>
             </div>
             <div class="slider-item">
-                 <picture>
+                <picture>
                     <source srcset="images/slide3-large.jpg" media="(min-width: 1200px)">
                     <source srcset="images/slide3-medium.jpg" media="(min-width: 768px)">
                     <img src="images/slide3-small.jpg" alt="Слайд 3">
                 </picture>
             </div>
         </section>
-
         <section class="featured-products">
-            
-                <h2>Рекомендовані товари</h2>
-                <div id="recommended-products" class="product-list">
-                    </div>
-            </section>
-            <div class="category-list">
-                <h2>Категорії товарів</h2>
-                <div class="category-items">
-                    <a href="catalog.html?category=smartphone">
-                        <img src="images/smartphone-category.jpg" alt="Смартфони">
-                        <span>Смартфони</span>
-                    </a>
-                    <a href="catalog.html?category=laptop">
-                        <img src="images/laptop-category.jpg" alt="Ноутбуки">
-                        <span>Ноутбуки</span>
-                    </a>
-                    <a href="catalog.html?category=tv">
-                        <img src="images/tv-category.jpg" alt="Телевізори">
-                        <span>Телевізори</span>
-                    </a>
-                </div>
-            </div>
+            <h2>Рекомендовані товари</h2>
+            <div id="recommended-products" class="product-list"></div>
         </section>
-
+        <div class="category-list">
+            <h2>Категорії товарів</h2>
+            <div class="category-items">
+                <a href="catalog.html?category=smartphone">
+                    <img src="images/smartphone-category.jpg" alt="Смартфони">
+                    <span>Смартфони</span>
+                </a>
+                <a href="catalog.html?category=laptop">
+                    <img src="images/laptop-category.jpg" alt="Ноутбуки">
+                    <span>Ноутбуки</span>
+                </a>
+                <a href="catalog.html?category=tv">
+                    <img src="images/tv-category.jpg" alt="Телевізори">
+                    <span>Телевізори</span>
+                </a>
+            </div>
+        </div>
         <div id="product-details" class="product-details-modal">
             <div class="product-details-content">
                 <span class="close-details">&times;</span>
-                <div id="product-details-content"></div>
+                <div id="product-details-content-inner"></div>
             </div>
         </div>
     </main>
@@ -104,6 +98,10 @@
             </div>
         </div>
         <p>&copy; 2025 Магазин Електроніки</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
     </footer>
 
     <script src="script.js"></script>
