@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
     const featuredProducts = [
         { id: 1, name: 'Смартфон 1', price: 500, image: 'images/smartphone1.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.' },
         { id: 2, name: 'Ноутбук 1', price: 800, image: 'images/laptop1.jpg', description: 'Легкий та потужний ноутбук для роботи та розваг.' },
@@ -23,32 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
     featuredProducts.forEach(product => {
         const productItem = document.createElement('div');
         productItem.classList.add('product-item');
-        productItem.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p>Ціна: ${product.price} грн</p>
-            <button class="view-details" data-id="${product.id}">Детальніше</button>
-            <button class="add-to-cart" data-id="${product.id}">Додати в кошик</button>
-        `;
-        productList.appendChild(productItem);
-    });
+productItem.innerHTML = `
+    <img src="${product.image}" alt="${product.name}">
+    <h2>${product.name}</h2>
+    <p>Ціна: ${product.price} грн</p>
+    <button class="view-details" data-id="${product.id}">Детальніше</button>
+    <button class="add-to-cart" data-id="${product.id}">Додати в кошик</button>
+`;
+productList.appendChild(productItem);
+});
 
-    productList.addEventListener('click', (event) => {
-        if (event.target.classList.contains('view-details')) {
-            const productId = parseInt(event.target.dataset.id);
-            const product = featuredProducts.find(p => p.id === productId);
+productList.addEventListener('click', (event) => {
+    if (event.target.classList.contains('view-details')) {
+        const productId = parseInt(event.target.dataset.id);
+        const product = featuredProducts.find(p => p.id === productId);
 
-            if (product) {
-                productDetailsContent.innerHTML = `
-                    <h2>${product.name}</h2>
-                    <img src="${product.image}" alt="${product.name}">
-                    <p>Ціна: ${product.price} грн</p>
-                    <p>Опис: ${product.description || 'Опис відсутній'}</p>
-                    <button class="add-to-cart-details" data-id="${product.id}">Додати в кошик</button>
-                `;
+        if (product) {
+            productDetailsContent.innerHTML = `
+                <h2>${product.name}</h2>
+                <img src="${product.image}" alt="${product.name}">
+                <p>Ціна: ${product.price} грн</p>
+                <p>Опис: ${product.description || 'Опис відсутній'}</p>
+                <button class="add-to-cart-details" data-id="${product.id}">Додати в кошик</button>
+            `;
+        
                 productDetailsModal.style.display = 'block';
 
-                // Додавання обробника подій для кнопки "Додати в кошик" у модальному вікні
                 const addToCartDetailsButton = document.querySelector('.add-to-cart-details');
                 addToCartDetailsButton.addEventListener('click', () => {
                     const productId = parseInt(addToCartDetailsButton.dataset.id);
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         cart.push(productToAdd);
                         localStorage.setItem('cart', JSON.stringify(cart));
 
-                        // Показуємо повідомлення
                         const messageDiv = document.createElement('div');
                         messageDiv.classList.add('added-to-cart-message');
                         messageDiv.textContent = `Товар "${productToAdd.name}" додано до кошика!`;
@@ -71,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         messageDiv.style.borderRadius = '5px';
                         document.body.appendChild(messageDiv);
 
-                        // Приховуємо повідомлення через 1 секунду
                         setTimeout(() => {
                             messageDiv.remove();
                         }, 1000);
@@ -89,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 cart.push(productToAdd);
                 localStorage.setItem('cart', JSON.stringify(cart));
 
-                // Показуємо повідомлення
                 const messageDiv = document.createElement('div');
                 messageDiv.classList.add('added-to-cart-message');
                 messageDiv.textContent = `Товар "${productToAdd.name}" додано до кошика!`;
@@ -101,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 messageDiv.style.borderRadius = '5px';
                 document.body.appendChild(messageDiv);
 
-                // Приховуємо повідомлення через 1 секунду
                 setTimeout(() => {
                     messageDiv.remove();
                 }, 1000);
@@ -130,31 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Запуск слайдера кожні 5 секунд
     showSlide(currentSlide);
     setInterval(nextSlide, 5000);
+
+    // Код для встановлення висоти рекомендованих товарів
+    const recommendedProducts = document.querySelectorAll('#recommended-products .product-item');
+    let maxHeight = 0;
+
+    recommendedProducts.forEach(product => {
+        maxHeight = Math.max(maxHeight, product.offsetHeight);
+    });
+
+    recommendedProducts.forEach(product => {
+        product.style.height = `${maxHeight}px`;
+    });
+
+    // Код для створення контейнера зображення
+    const imageContainer = document.createElement('div');
+    imageContainer.style.width = '300px';
+    imageContainer.style.height = '300px';
+    imageContainer.style.overflow = 'hidden';
+
+    const img = document.createElement('img');
+    img.src = product.image; // Використовуйте product з featuredProducts
+    img.alt = product.name; // Використовуйте product з featuredProducts
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'contain';
+
+    imageContainer.appendChild(img);
+
+    // ... (ваш код, де ви додаєте imageContainer до DOM) ...
 });
-
-// Після того, як ви додали рекомендовані товари до productList
-const recommendedProducts = document.querySelectorAll('#recommended-products .product-item');
-let maxHeight = 0;
-
-recommendedProducts.forEach(product => {
-    maxHeight = Math.max(maxHeight, product.offsetHeight);
-});
-
-recommendedProducts.forEach(product => {
-    product.style.height = `${maxHeight}px`;
-});
-const imageContainer = document.createElement('div');
-imageContainer.style.width = '300px'; // Задайте потрібну ширину
-imageContainer.style.height = '300px'; // Задайте потрібну висоту
-imageContainer.style.overflow = 'hidden';
-
-const img = document.createElement('img');
-img.src = product.image;
-img.alt = product.name;
-img.style.width = '100%';
-img.style.height = '100%';
-img.style.objectFit = 'contain';
-
-imageContainer.appendChild(img);
-
-// ... (ваш код, де ви додаєте imageContainer до DOM) ...
