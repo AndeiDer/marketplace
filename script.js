@@ -154,20 +154,5 @@ productList.addEventListener('click', (event) => {
         product.style.height = `${maxHeight}px`;
     });
 
-    // Код для створення контейнера зображення
-    const imageContainer = document.createElement('div');
-    imageContainer.style.width = '300px';
-    imageContainer.style.height = '300px';
-    imageContainer.style.overflow = 'hidden';
-
-    const img = document.createElement('img');
-    img.src = product.image; // Використовуйте product з featuredProducts
-    img.alt = product.name; // Використовуйте product з featuredProducts
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'contain';
-
-    imageContainer.appendChild(img);
-
     // ... (ваш код, де ви додаєте imageContainer до DOM) ...
 });
