@@ -3,17 +3,21 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 header {
     background-color: #f0f0f0;
     padding: 10px;
+   
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+     
+    
 }
 
 .nav-links {
@@ -154,13 +158,56 @@ footer {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    background-color: #fff;
+    margin: 1% auto; /* Центрування по вертикалі та горизонталі */
+    padding: 30px;
     border: 1px solid #888;
-    width: 80%;
+    width: 80%; /* Можете налаштувати ширину */
+    max-width: 600px; /* Максимальна ширина */
+    border-radius: 8px; /* Заокруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легка тінь */
+    position: relative; 
 }
+ 
+.modal-content h2{
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+.modal-content img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.modal-content p{
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content .add-to-cart-modal {
+    background-color: #2ecc71; /* Зелений колір кнопки */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0; /* Розташування по центру */
+    text-align: center;
+    width: fit-content; /* Або задайте фіксовану ширину */
+}
+
 
 .close-details {
     color: #aaa;
@@ -179,8 +226,7 @@ footer {
 /* Приклад стилів для повідомлень */
 .message {
     position: fixed;
-    top: 20px;
-    right: 20px;
+   
     background-color: #e0f7fa;
     padding: 10px;
     border-radius: 5px;
@@ -256,12 +302,58 @@ footer {
 }
 
 .product-details-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    background-color: #fff;
+    margin: 5% auto; /* Центрування по вертикалі та горизонталі */
+    padding: 30px;
     border: 1px solid #888;
-    width: 60%;
-    position: relative;
+    width: 80%; /* Можете налаштувати ширину */
+    max-width: 600px; /* Максимальна ширина */
+    border-radius: 8px; /* Заокруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легка тінь */
+    position: relative; /* Для абсолютно позиціонованої кнопки закриття */
+}
+
+.product-details-content h2 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.product-details-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-details-content .add-to-cart-details {
+    background-color: #2ecc71; /* Зелений колір кнопки */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0; /* Розташування по центру */
+    text-align: center;
+    width: fit-content; /* Або задайте фіксовану ширину */
+}
+
+.product-details-content .add-to-cart-details:hover {
+    background-color: #27ae60;
 }
 
 .close-details {
@@ -274,6 +366,11 @@ footer {
     cursor: pointer;
 }
 
+.close-details:hover,
+.close-details:focus {
+    color: #333;
+    text-decoration: none;
+}
 /* ... (інші стилі) ... */
 
 footer {
@@ -375,6 +472,7 @@ footer li {
     width: 250px;
     padding: 20px;
     background-color: #f0f0f0;
+   max-height: 450px;
 }
 
 .filter-section {
@@ -586,7 +684,7 @@ footer li {
 }
 
 .container {
-    width: 80%;
+    
     margin: 0 auto;
     padding: 20px;
 }
@@ -647,6 +745,7 @@ footer li {
 .product-actions .add-to-cart:hover {
     background-color: #27ae60;
 }
+
 @media (max-width: 768px) {
     .product-list {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -765,28 +864,32 @@ footer li {
 }
 
 
+/* Ваш існуючий CSS-код */
+
 .nav-links {
-    display: none;
+    display: none; /* Приховуємо меню за замовчуванням */
     flex-direction: column;
-    width: 100%;
+  
     background-color: #f0f0f0;
+    margin-right: 20px;
 }
 
 .nav-links.show {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+    display: flex; /* Показуємо меню при додаванні класу show */
+    position: fixed; /* Фіксуємо навігацію у верхній частині екрана */
+    top: 0; /* Розташовуємо у верхній частині екрана */
+    left: 0; /* Розташовуємо зліва у верхній частині екрана */
+    width: 100%; /* Займаємо всю ширину екрана */
+    z-index: 100; /* Розташовуємо над іншими елементами */
 }
 
 @media (min-width: 469px) {
     .nav-links {
-        display: flex;
+        display: flex; /* Показуємо меню на великих екранах */
         flex-direction: row;
         position: static;
         background-color: transparent;
+       
     }
 }
 
@@ -797,11 +900,330 @@ footer li {
     right: 15px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 101 !important; /* Додаємо !important; */
 }
 
 @media (max-width: 468px) {
     .menu-toggle {
         display: block;
     }
+}
+
+/* style.css */
+
+/* ... ваш існуючий CSS код ... */
+
+.featured-products {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.featured-products .product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.featured-products .product-item {
+    width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.featured-products .product-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.featured-products .product-item button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* style.css */
+
+/* ... ваш існуючий CSS код ... */
+
+.featured-products .product-item .product-actions {
+    display: flex; /* Або інше значення, яке ви використовуєте на десктопі */
+    justify-content: space-around; /* Або інше значення */
+    margin-top: 15px;
+}
+
+.featured-products .product-item .product-actions button {
+    /* Базові стилі кнопок */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Змушує кнопки займати доступний простір в flex-контейнері */
+    margin: 0 5px; /* Додайте невеликий відступ між кнопками на десктопі */
+}
+
+.featured-products .product-item .product-actions button:hover {
+    background-color: #45a049;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .featured-products .product-item .product-actions {
+        display: block; /* Змінюємо на block, щоб кнопки йшли одна під одною */
+    }
+
+    .featured-products .product-item .product-actions button {
+        display: block; /* Розміщуємо кнопки на окремих рядках */
+        width: 100%; /* Займають всю ширину контейнера .product-item */
+        padding: 12px;
+        margin-bottom: 5px;
+        font-size: 1.1em;
+        margin: 5px 0; /* Верхній та нижній відступи для розділення кнопок */
+        flex-grow: 0; /* Скасовуємо flex-grow на мобільних */
+    }
+}
+
+/* Додаткові адаптивні стилі для дуже маленьких екранів (за потреби) */
+@media (max-width: 480px) {
+    .featured-products .product-item .product-actions button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+/* style.css */
+
+/* style.css */
+
+/* ... ваші існуючі стилі ... */
+
+.sidebar .filter-section { /* Змінено селектор, щоб застосовувати стилі лише до фільтрів у sidebar */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Додано відступ знизу між секціями фільтрів */
+}
+
+.sidebar .filter-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.sidebar .category-filter label {
+    display: block; /* Кожна категорія на новому рядку */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.sidebar .category-filter input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Стилі для сортування (залишаються незмінними, але переконайтеся, що вони є) */
+.sidebar .filter-section #price-sort {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+}
+
+.sidebar #price-sort:hover,
+.sidebar #price-sort:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* style.css */
+
+/* ... ваші існуючі стилі ... */
+
+.product-list {
+    flex: 1; /* Щоб займав доступний простір в контейнері */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Або center, якщо хочете вирівнювання по центру */
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 300px; /* Фіксована ширина, як у рекомендованих товарів */
+    margin-bottom: 20px; /* Відступ між товарами по вертикалі */
+    text-align: center;
+}
+
+.product-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Або contain, залежно від бажаного відображення */
+}
+
+.product-item h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.product-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.product-actions .view-details {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.product-actions .add-to-cart {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.product-actions button:hover {
+    opacity: 0.9;
+}
+
+/* Адаптивність (можна додати медіа-запити для зміни ширини на дуже малих екранах) */
+@media (max-width: 768px) {
+    .product-list {
+        justify-content: center; /* Вирівнювання по центру на менших екранах */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Займає всю ширину на дуже малих екранах */
+    }
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+/* style.css */
+
+/* ... ваші існуючі стилі ... */
+
+.filter-toggle {
+    display: none; /* Приховати за замовчуванням */
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Для екранів менше 768px (приклад брейкпойнта) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80%; /* Можете налаштувати ширину бічної панелі */
+        position: fixed;
+        top: 60px; /* Або висота вашого header */
+        left: -80%; /* Приховано за межами екрана */
+        bottom: 0;
+        background-color: #f0f0f0;
+        z-index: 10;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        padding: 20px; /* Додайте відступи всередині бічної панелі */
+        box-sizing: border-box; /* Важливо для правильного розрахунку ширини */
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .filter-toggle {
+        display: block; /* Показати на малих екранах */
+    }
+
+    .container {
+        flex-direction: column; /* Вертикальний макет для розміщення toggle зверху */
+        align-items: stretch; /* Розтягуємо елементи по ширині контейнера */
+    }
+
+    .product-list {
+        width: 100%;
+    }
+
+    .category-list.under-filter {
+        margin-top: 20px; /* Додайте відступ між категоріями та списком товарів */
+    }
+}
+
+/* Для великих екранів */
+.product-details-content h3 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.modal-content ul{
+    list-style: disc; /* Або інший стиль списку */
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.product-details-content ul {
+    list-style: disc; /* Або інший стиль списку */
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.product-details-content li {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+.modal-content li{
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+
+.modal-content .add-to-cart-details {
+    background-color: #2ecc71; /* Зелений колір кнопки */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0; /* Розташування по центру */
+    text-align: center;
+    width: fit-content; 
 }
