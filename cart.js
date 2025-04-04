@@ -48,10 +48,12 @@ function updateCart(discount = 0) {
                         <input type="number" class="quantity-input" value="${item.quantity}">
                         <button class="quantity-plus" data-index="${index}">+</button>
                     </div>
-                   
+                  
                 </div>
+                
             </div>
-       <button class="remove-from-cart" data-index="${index}">Видалити</button>  `;
+              <button class="remove-from-cart" data-index="${index}">Видалити</button>
+        `;
         cartItems.appendChild(cartItem);
         totalPrice += item.price * item.quantity;
     });
@@ -163,3 +165,29 @@ function getDiscount(promoCode) {
 
     return promoCodes[promoCode] || 0;
 }
+
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    menuToggle.classList.toggle('open');
+});
+
+// Закриття меню при кліку на посилання (опціонально)
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('open');
+    });
+});
+
+// Закриття меню при кліку за його межами
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navLinks.contains(event.target) || menuToggle.contains(event.target);
+    if (navLinks.classList.contains('show') && !isClickInsideMenu) {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('open');
+    }
+});
