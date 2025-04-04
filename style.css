@@ -810,7 +810,7 @@ footer li {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 548px) {
     .product-list {
         grid-template-columns: 1fr;
     }
@@ -826,7 +826,7 @@ footer li {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 548px) {
     .product-list {
         grid-template-columns: 1fr;
     }
@@ -849,7 +849,7 @@ footer li {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 548px) {
     .product-item h2 {
         font-size: 0.9em;
     }
@@ -883,7 +883,7 @@ footer li {
     z-index: 100; /* Розташовуємо над іншими елементами */
 }
 
-@media (min-width: 469px) {
+@media (min-width: 549px) {
     .nav-links {
         display: flex; /* Показуємо меню на великих екранах */
         flex-direction: row;
@@ -902,7 +902,7 @@ footer li {
     cursor: pointer;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 548px) {
     .menu-toggle {
         display: block;
     }
