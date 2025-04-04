@@ -1227,3 +1227,132 @@ footer li {
     text-align: center;
     width: fit-content; 
 }
+
+
+
+/* Адаптивні стилі для маленьких екранів (максимальна ширина 768px) */
+@media (max-width: 768px) {
+    .cart-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .cart-item-quantity {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .cart-item-remove {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .cart-total {
+        text-align: left; /* Вирівнюємо ліворуч на мобільних */
+        margin-top: 20px;
+        font-size: 1.1em;
+    }
+
+    .promo-code-container {
+        text-align: left; /* Вирівнюємо ліворуч на мобільних */
+        margin-top: 20px;
+    }
+}
+
+/* Адаптивні стилі для ще менших екранів (максимальна ширина 500px) */
+@media (max-width: 500px) {
+    .cart-item-quantity {
+        flex-direction: row; /* Повертаємо в ряд для кращого розміщення */
+        justify-content: space-between; /* Розміщуємо елементи по краях */
+        width: 100%; /* Займає всю ширину */
+    }
+
+    .cart-item-quantity label {
+        margin-right: 0;
+    }
+
+    .cart-item-quantity input[type="number"] {
+        width: 40px; /* Зменшуємо ширину інпута */
+        font-size: 0.9em; /* Зменшуємо розмір числа */
+    }
+
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+    }
+
+    .quantity-controls button {
+        padding: 5px 8px; /* Зменшуємо розміри кнопок +/- */
+        font-size: 0.8em;
+        margin: 0 5px; /* Зменшуємо відстань між кнопками та інпутом */
+    }
+
+    .promo-code-container input[type="text"] {
+        width: 100%; /* Інпут промокоду займає всю ширину */
+        margin-bottom: 10px; /* Додаємо відступ перед кнопкою */
+    }
+
+    .promo-code-container button {
+        width: 100%; /* Кнопка застосування промокоду займає всю ширину */
+    }
+}
+
+@media (max-width: 500px) {
+.cart-item .quantity button{
+width: 20px;
+height: 25px;
+}
+.cart-item .quantity input{
+    width: 30px;
+}
+#promo-code-input{
+    width: 90px;
+}}
+
+@media (max-width: 400px) {
+    .cart-total {
+        font-size: 0.9em;
+    }
+.cart-item .quantity input{
+    width: 15px;
+    height: 20px;
+}
+#promo-code-input{
+    width: 80px;
+  
+}
+.remove-from-cart, .clear-cart, .checkout, #apply-promo-code{
+    
+  width: 90px;
+    font-size: 0.7em;
+}
+
+}
+
+@media (max-width: 360px){
+    #promo-code-input{
+        width: 60px;
+      
+    }
+    .remove-from-cart, .clear-cart, .checkout, #apply-promo-code {
+        width: 78px;
+    }
+    .cart-total{
+        padding: 5px;
+
+    }
+    .cart-item .quantity {
+        padding: 1px;
+    }
+}
