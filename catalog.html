@@ -10,6 +10,7 @@
     <header>
         <nav>
             <div class="logo">Магазин Електроніки</div>
+            <div class="menu-toggle">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
@@ -21,15 +22,26 @@
 
     <main>
         <div class="container">
-            <aside class="sidebar">
+            <div class="filter-toggle">
+                <span>&#9776; Фільтри</span>
+            </div>
+            <aside class="sidebar hidden-sidebar">
                 <div class="filter-section">
                     <h3>Категорії</h3>
-                    <select id="category-filter">
-                        <option value="all">Усі товари</option>
-                        <option value="smartphone">Смартфони</option>
-                        <option value="laptop">Ноутбуки</option>
-                        <option value="tv">Телевізори</option>
-                    </select>
+                    <div class="category-filter">
+                        <label>
+                            <input type="checkbox" name="category" value="all" checked> Усі товари
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="category" value="smartphone"> Смартфони
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="category" value="laptop"> Ноутбуки
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="category" value="tv"> Телевізори
+                        </label><br>
+                    </div>
                 </div>
                 <div class="filter-section">
                     <h3>Сортування за ціною</h3>
@@ -39,6 +51,8 @@
                     </select>
                 </div>
             </aside>
+            <div id="categories-under-filter" class="category-list under-filter">
+            </div>
             <main class="product-list"></main>
         </div>
         
