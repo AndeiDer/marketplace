@@ -48,10 +48,10 @@ function updateCart(discount = 0) {
                         <input type="number" class="quantity-input" value="${item.quantity}">
                         <button class="quantity-plus" data-index="${index}">+</button>
                     </div>
-                    <button class="remove-from-cart" data-index="${index}">Видалити</button>
+                   
                 </div>
             </div>
-        `;
+       <button class="remove-from-cart" data-index="${index}">Видалити</button>  `;
         cartItems.appendChild(cartItem);
         totalPrice += item.price * item.quantity;
     });
