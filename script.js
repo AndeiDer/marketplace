@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    
     if (closeDetails && productDetailsModal) {
         closeDetails.addEventListener('click', () => {
             productDetailsModal.style.display = 'none';
