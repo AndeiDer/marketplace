@@ -1,0 +1,286 @@
+/* Покращені базові стилі для сторінки оформлення замовлення */
+.con-main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Сучасний шрифт */
+    background-color: #f8f9fa; /* Світло-сірий фон */
+    margin: 0;
+    padding: 20px; /* Додамо загальний відступ */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Вирівнюємо по верхньому краю для кращого вигляду */
+    min-height: 100vh;
+}
+
+main {
+    background-color: #fff;
+    padding: 40px; /* Збільшимо внутрішні відступи */
+    border-radius: 12px; /* Більш помітні заокруглення */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Легка тінь */
+    max-width: 700px; /* Трохи збільшимо максимальну ширину */
+    margin: 30px; /* Збільшимо зовнішні відступи */
+    width: 100%; /* Займає всю доступну ширину контейнера */
+}
+
+h2 {
+    text-align: center;
+    color: #343a40; /* Темно-сірий колір заголовка */
+    margin-bottom: 30px; /* Збільшимо відступ знизу */
+    font-size: 2.2em; /* Трохи більший розмір шрифту */
+}
+
+h3 {
+    color: #343a40;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+#checkout-cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0; /* Легка межа для списку товарів */
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.checkout-cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0; /* Пунктирна лінія між товарами */
+}
+
+.checkout-cart-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.checkout-cart-item img {
+    width: 60px; /* Трохи більший розмір зображення */
+    height: 60px;
+    object-fit: contain;
+    margin-right: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-cart-item span {
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.checkout-total {
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    color: #28a745; /* Зелений колір для загальної суми */
+    font-weight: bold;
+}
+
+.checkout-total span {
+    color: #28a745;
+}
+
+form#checkout-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500; /* Напівжирний шрифт */
+    color: #495057;
+    font-size: 1.1em;
+}
+
+form#checkout-form input[type="text"],
+form#checkout-form input[type="email"],
+form#checkout-form input[type="tel"], /* Додаємо стиль для поля телефону */
+form#checkout-form textarea,
+form#checkout-form select {
+    width: 100%;
+    padding: 12px; /* Збільшимо внутрішні відступи */
+    margin-bottom: 20px; /* Збільшимо відступ знизу */
+    border: 1px solid #ced4da; /* Світло-сіра межа */
+    border-radius: 6px; /* Більші заокруглення */
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #495057;
+    transition: border-color 0.2s ease-in-out; /* Плавна зміна кольору межі при фокусі */
+}
+
+form#checkout-form input:focus,
+form#checkout-form textarea:focus,
+form#checkout-form select:focus {
+    border-color: #007bff; /* Колір межі при фокусі */
+    outline: none; /* Видаляємо стандартний outline браузера */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Додаємо легку тінь при фокусі */
+}
+
+form#checkout-form textarea {
+    resize: vertical;
+    min-height: 120px; /* Трохи більша висота за замовчуванням */
+}
+
+form#checkout-form select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23495057" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Збільшимо відступ стрілки */
+    background-size: 1em;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+form#checkout-form button[type="submit"] {
+    background-color: #28a745; /* Зелений колір для кнопки підтвердження */
+    color: white;
+    padding: 15px 30px; /* Більші внутрішні відступи */
+    border: none;
+    border-radius: 8px; /* Більші заокруглення */
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+form#checkout-form button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+/* Стилі для чат-контейнера (можете налаштувати за своїм бажанням) */
+#chat-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    max-height: 450px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-messages {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#chat-input {
+    padding: 12px;
+    border-top: 1px solid #e0e0e0;
+    border-left: none;
+    border-right: none;
+    border-bottom-left-radius: 12px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: calc(100% - 80px); /* Враховуємо ширину кнопки */
+    font-size: 1em;
+    color: #495057;
+}
+
+#send-message {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-top: 1px solid #007bff;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 80px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#send-message:hover {
+    background-color: #0056b3;
+}
+
+
+.checkout-promo-code-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-promo-code-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#checkout-promo-code-input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#apply-checkout-promo-code {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#apply-checkout-promo-code:hover {
+    background-color: #0056b3;
+}
+
+#checkout-promo-code-status {
+    margin-left: 10px;
+}
+
+/* Адаптивні стилі (за потреби) */
+@media (max-width: 500px) {
+    .checkout-promo-code-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .checkout-promo-code-container label {
+        margin-bottom: 5px;
+    }
+
+    #checkout-promo-code-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #checkout-promo-code-status {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* ... ваші попередні стилі ... */
+
+.checkout-total-payment {
+    text-align: center;
+    margin-top: 10px; /* Збільшимо відступ зверху */
+    margin-bottom: 10px; /* Додамо відступ знизу перед кнопкою */
+    padding: 15px 20px; /* Додамо внутрішні відступи для кращого вигляду */
+    font-size: 1.8em; /* Збільшимо розмір шрифту */
+    color: #01290b; /* Зробимо колір зеленим, як і загальну суму в кошику (можете змінити) */
+    font-weight: bold;
+  
+}
+
+.checkout-total-payment span {
+    color: #01290b; /* Колір для значення суми */
+}
+
+/* ... ваші наступні стилі ... */

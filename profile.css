@@ -1,0 +1,167 @@
+.profile-container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.order-history {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.order-history h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.order-history p {
+    color: #777;
+}
+
+.logout-button {
+    display: block;
+    width: 150px;
+    padding: 10px 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Загальні стилі (для всіх розмірів екранів) */
+.profile-container {
+    width: 90%; /* Зробимо контейнер більш гнучким за замовчуванням */
+    max-width: 600px; /* Обмежимо максимальну ширину на великих екранах */
+    margin: 30px auto; /* Зменшимо верхній та нижній відступи */
+    padding: 20px; /* Зменшимо внутрішні відступи */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    margin-bottom: 20px; /* Зменшимо відступ */
+    padding-bottom: 15px; /* Зменшимо відступ */
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 10px; /* Зменшимо відступ */
+}
+
+.profile-info p {
+    line-height: 1.5; /* Трохи зменшимо міжрядковий інтервал */
+    color: #555;
+    margin-bottom: 8px; /* Зменшимо відступ */
+    font-size: 0.95em; /* Трохи зменшимо розмір шрифту */
+}
+
+.order-history {
+    margin-bottom: 20px; /* Зменшимо відступ */
+    padding-bottom: 15px; /* Зменшимо відступ */
+    border-bottom: 1px solid #eee;
+}
+
+.order-history h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 10px; /* Зменшимо відступ */
+}
+
+.order-history p {
+    color: #777;
+    font-size: 0.9em; /* Трохи зменшимо розмір шрифту */
+}
+
+.logout-button {
+    display: block;
+    width: 120px; /* Зменшимо ширину кнопки */
+    padding: 8px 12px; /* Зменшимо внутрішні відступи кнопки */
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em; /* Трохи зменшимо розмір шрифту кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Зменшимо відступ */
+    margin-left: auto; /* Вирівняємо кнопку праворуч (за бажанням) */
+    margin-right: auto; /* Вирівняємо кнопку праворуч (за бажанням) */
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Медіа-запит для екранів менше 768px (наприклад, мобільні пристрої) */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px; /* Залишаємо базовий відступ */
+        margin: 20px auto; /* Трохи зменшимо відступи */
+    }
+
+    .profile-info h2,
+    .order-history h2 {
+        font-size: 1.3em; /* Трохи зменшимо розмір заголовків */
+    }
+
+    .profile-info p,
+    .order-history p {
+        font-size: 0.9em; /* Залишаємо або ще трохи зменшимо розмір шрифту */
+    }
+
+    .logout-button {
+        width: 100%; /* Кнопка займатиме всю ширину на мобільних */
+        font-size: 1em; /* Повернемо більший розмір шрифту для кнопки */
+        margin-left: 0; /* Вирівняємо по лівому краю */
+        margin-right: 0; /* Вирівняємо по правому краю */
+    }
+}
+
+/* Медіа-запит для ще менших екранів (наприклад, 320px) */
+@media (max-width: 320px) {
+    .profile-container {
+        padding: 15px; /* Ще трохи зменшимо внутрішні відступи */
+        margin: 15px auto; /* Ще трохи зменшимо зовнішні відступи */
+    }
+
+    .profile-info h2,
+    .order-history h2 {
+        font-size: 1.2em; /* Ще трохи зменшимо розмір заголовків */
+    }
+}

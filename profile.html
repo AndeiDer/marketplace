@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Магазин Електроніки</div>
+            <div class="menu-toggle">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+            
+                <li><a href="profile.html">Особистий кабінет</a></li>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div class="profile-container">
+        <h1>Особистий кабінет</h1>
+        <div class="profile-info">
+            <h2>Інформація профілю</h2>
+            <p>Вітаємо, <span id="user-name">Користувач</span>!</p>
+            <p>Email: <span id="user-email">user@example.com</span></p>
+        </div>
+
+        <div class="order-history">
+            <h2>Історія замовлень</h2>
+            <p>Тут буде відображатися історія ваших замовлень.</p>
+            </div>
+
+        <button id="logout-button" class="logout-button">Вийти</button>
+    </div>
+
+    <script src="profile.js"></script>
+   
+</body>
+</html>

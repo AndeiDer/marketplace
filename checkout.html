@@ -5,57 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформлення замовлення</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="check.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header>
-        <div class="logo">Магазин електроніки</div>
         <nav>
-            <ul>
+            <div class="logo">Магазин Електроніки</div>
+            <div class="menu-toggle">&#9776;</div>
+            <ul class="nav-links">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Кошик</a></li>
-                <li><a href="profile.html">Профіль</a></li>
-                <li><a href="about.html">Про нас</a></li>
+                <li><a href="profile.html">Особистий кабінет</a></li>
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <h2>Оформлення замовлення</h2>
-        <form id="checkout-form">
-            <label for="name">Ім'я:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="address">Адреса доставки:</label>
-            <textarea id="address" name="address" required></textarea><br><br>
-
-            <label for="delivery">Спосіб доставки:</label>
-            <select id="delivery" name="delivery">
-                <option value="courier">Кур'єр</option>
-                <option value="post">Пошта</option>
-                <option value="pickup">Самовивіз</option>
-            </select><br><br>
-
-            <label for="payment">Спосіб оплати:</label>
-            <select id="payment" name="payment">
-                <option value="card">Онлайн-оплата карткою</option>
-                <option value="cash">Готівка при отриманні</option>
-            </select><br><br>
-
-            <button type="submit">Підтвердити замовлення</button>
-        </form>
-    </main>
-
-    <div id="chat-container">
-        <div id="chat-messages">
+    <div class="con-main">
+        <main>
+            <h2>Оформлення замовлення</h2>
+    
+            <h3>Ваше замовлення:</h3>
+            <ul id="checkout-cart-items">
+                </ul>
+    
+            <div class="checkout-total">
+                Загальна сума: <span id="checkout-total-price">0</span> грн
+                <div id="checkout-promo-code-message" style="font-size: 0.9em; margin-top: 5px;"></div>
             </div>
-        <input type="text" id="chat-input">
-        <button id="send-message">Надіслати</button>
-    </div>
+    
+            <div class="checkout-promo-code-container">
+                <label for="checkout-promo-code-input">Промокод:</label>
+                <input type="text" id="checkout-promo-code-input" placeholder="Введіть промокод">
+                <button id="apply-checkout-promo-code">Застосувати</button>
+                <div id="checkout-promo-code-status" style="margin-top: 5px; font-size: 0.9em;"></div>
+            </div>
+    
+            <form id="checkout-form">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required><br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+    
+                <label for="address">Адреса доставки:</label>
+                <textarea id="address" name="address" required></textarea><br><br>
+    
+                <label for="delivery">Спосіб доставки:</label>
+                <select id="delivery" name="delivery">
+                    <option value="courier">Кур'єр 500грн </option>
+                    <option value="post">Пошта 100грн</option>
+                    <option value="pickup">Самовивіз</option>
+                </select><br><br>
+    
+                <label for="payment">Спосіб оплати:</label>
+                <select id="payment" name="payment">
+                    <option value="card">Онлайн-оплата карткою</option>
+                    <option value="cash">Готівка при отриманні</option>
+                </select><br><br>
+                <div id="card-details" style="display: none;">
+                    <h3>Введіть дані картки</h3>
+                    <label for="card-number">Номер картки:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX"><br><br>
+    
+                    <label for="card-expiry">Термін дії (MM/YY):</label>
+                    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY"><br><br>
+    
+                    <label for="card-cvv">CVV:</label>
+                    <input type="text" id="card-cvv" name="card-cvv" placeholder="XXX"><br><br>
+                </div>
 
-    <script src="script.js"></script>
+                <div class="checkout-total-payment">
+                    Загальна сума до сплати: <span id="total-payment">0</span> 
+                </div>
+
+                <button type="submit">Підтвердити замовлення</button>
+            </form>
+        </main>
+    </div>
+   
+    <script src="checkount.js"></script>
 </body>
 </html>
