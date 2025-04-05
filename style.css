@@ -810,7 +810,7 @@ footer li {
     }
 }
 
-@media (max-width: 548px) {
+@media (max-width: 480px) {
     .product-list {
         grid-template-columns: 1fr;
     }
@@ -826,7 +826,7 @@ footer li {
     }
 }
 
-@media (max-width: 548px) {
+@media (max-width: 768px) {
     .product-list {
         grid-template-columns: 1fr;
     }
@@ -1355,4 +1355,58 @@ height: 25px;
     .cart-item .quantity {
         padding: 1px;
     }
+}
+
+
+/* Стилі для посилання-корзинки (замінюють стандартні стилі посилань) */
+a.cart-link { /* Додамо клас для більш конкретного націлювання */
+    text-decoration: none; /* Видалити підкреслення */
+    color: inherit; /* Успадкувати колір від батьківського елемента (наприклад, колір тексту h1) */
+    display: inline-block; /* Щоб посилання займало стільки місця, скільки його вміст */
+}
+
+a.cart-link:hover {
+    /* Додайте стилі для наведення курсора, якщо потрібно, наприклад: */
+    opacity: 0.8;
+}
+
+/* Стилі для заголовка h1 всередині посилання (якщо ви використовуєте h1) */
+a.cart-link h1 {
+    margin: 0; /* Заберіть стандартні відступи h1, якщо вони заважають */
+    /* Інші стилі вашого заголовка h1 (розмір шрифту, колір тощо) повинні бути тут
+       або вже визначені в інших правилах CSS */
+}
+/* Стилі для SVG-іконки */
+a.cart-link h1 svg {
+    width: 2em;
+    height: 2em;
+    fill: #333;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.fa-shopping-cart{
+ margin-left: 10px;font-weight: 700;   
+ color: #da880d;
+}
+
+/* Стилі для посилання "Оформити замовлення" */
+a.checkout-button {
+    text-decoration: none; /* Видалити підкреслення */
+    color: inherit; /* Успадкувати колір тексту від батьківського елемента (або визначте свій колір нижче) */
+    /* Додайте інші стилі, які ви хочете для кнопки, наприклад: */
+    background-color: #438ad6; /* Приклад кольору фону */
+    color: white; /* Приклад кольору тексту */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline-block; /* Щоб можна було задавати padding та margin */
+    /* Інші ваші стилі для кнопки */
+}
+
+a.checkout-button:hover {
+    /* Стилі при наведенні курсора (за бажанням) */
+    background-color: #0056b3;
 }
