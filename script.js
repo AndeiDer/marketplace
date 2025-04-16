@@ -22,9 +22,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const featuredProducts = [
-        { id: 1, name: 'Смартфон 1', price: 500, image: 'images/smartphone1.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.' },
-        { id: 2, name: 'Ноутбук 1', price: 800, image: 'images/laptop1.jpg', description: 'Легкий та потужний ноутбук для роботи та розваг.' },
-        { id: 3, name: 'Телевізор 1', price: 1200, image: 'images/tv1.jpg', description: 'Великий телевізор з високою роздільною здатністю для кіноперегляду.' }
+      { id: 1, name: 'Iphone 16 Pro Max', price: 70000, category: 'smartphone', image: 'images/iphon.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.',
+       features: [
+            
+                            'Діагональ дисплея 6,9',
+            
+                            'Процесор: Snapdragon 888',
+            
+                            'Оперативна пам\'ять: 8 ГБ',
+            
+                            'Вбудована пам\'ять: 128 ГБ',
+            
+                            'Камера: 64 Мп'
+            
+                        ] },
+            
+                
+                { id: 2, name: 'MacBook Air 13', price: 36800, category: 'laptop', image: 'images/mac.jpg', description: 'Легкий та потужний ноутбук для роботи та розваг.',
+        
+                    features: [
+        
+                        'Діагональ екрану 13,3',
+        
+                        'Процесор: Intel Core 7',
+        
+                        'Оперативна пам\'ять: 8 ГБ',
+        
+                        'Вбудована пам\'ять: 256 ГБ SSD',
+        
+                        'Відеокарта: Intel Iris Xe Graphics'
+        
+                    ]
+        
+                },
+        
+                { id: 3, name: 'Xiaome Tv A Pro32', price: 22200, category: 'tv', image: 'images/xiaomitv.jpg', description: 'Великий телевізор з високою роздільною здатністю для кіноперегляду.', features: [
+        
+                        'Діагональ: 55"',
+        
+                        'Роздільна здатність: 4K UHD',
+        
+                        'Технологія: LED',
+        
+                        'Smart TV: Так',
+        
+                        'HDR: Так'
+        
+                    ] }
     ];
 
     featuredProducts.forEach(product => {
