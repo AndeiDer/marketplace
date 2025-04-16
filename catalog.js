@@ -13,82 +13,162 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar'); // Отримуємо бічну панель
     const container = document.querySelector('.container');
 
-    const products = [
-        { id: 1, name: 'Смартфон 1', price: 500, category: 'smartphone', image: 'images/smartphone1.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.',
-            features: [
-                'Екран: 6.5" IPS',
-                'Процесор: Snapdragon 888',
-                'Оперативна пам\'ять: 8 ГБ',
-                'Вбудована пам\'ять: 128 ГБ',
-                'Камера: 64 Мп'
-            ] },
-        { id: 2, name: 'Ноутбук 1', price: 800, category: 'laptop', image: 'images/laptop1.jpg', description: 'Легкий та потужний ноутбук для роботи та розваг.',
-            features: [
-                'Екран: 6.5" IPS',
-                'Процесор: Snapdragon 888',
-                'Оперативна пам\'ять: 8 ГБ',
-                'Вбудована пам\'ять: 128 ГБ',
-                'Камера: 64 Мп'
-            ]
-        },
-        { id: 3, name: 'Телевізор 1', price: 1200, category: 'tv', image: 'images/tv1.jpg', description: 'Великий телевізор з високою роздільною здатністю для кіноперегляду.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 4, name: 'Ноутбук 2', price: 1500, category: 'laptop', image: 'images/laptop2.jpg', description: 'Ноутбук з потужною відеокартою для ігор.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 5, name: 'Смартфон 2', price: 600, category: 'smartphone', image: 'images/smartphone2.jpg', description: 'Смартфон з великим обсягом пам\'яті та якісною камерою.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 6, name: 'Телевізор 2', price: 1300, category: 'tv', image: 'images/tv2.jpg', description: 'Телевізор з підтримкою 4K та Smart TV.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 7, name: 'Ноутбук 3', price: 15020, category: 'laptop', image: 'images/laptop2.jpg', description: 'Ноутбук з потужною відеокартою для ігор.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 8, name: 'Смартфон 3', price: 1600, category: 'smartphone', image: 'images/smartphone2.jpg', description: 'Смартфон з великим обсягом пам\'яті та якісною камерою.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 9, name: 'Телевізор 3', price: 51300, category: 'tv', image: 'images/tv2.jpg', description: 'Телевізор з підтримкою 4K та Smart TV.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] },
-        { id: 10, name: 'Телевізор 4', price: 7300, category: 'tv', image: 'images/tv2.jpg', description: 'Телевізор з підтримкою 4K та Smart TV.', features: [
-            'Екран: 6.5" IPS',
-            'Процесор: Snapdragon 888',
-            'Оперативна пам\'ять: 8 ГБ',
-            'Вбудована пам\'ять: 128 ГБ',
-            'Камера: 64 Мп'
-        ] }
-    ];
-
+   const products = [
+        { id: 1, name: 'Iphone 16 Pro Max', price: 70000, category: 'smartphone', image: 'images/iphon.jpg', description: 'Сучасний смартфон з потужним процесором та яскравим екраном.',
+       features: [
+            
+                            'Діагональ дисплея 6,9',
+            
+                            'Процесор: Snapdragon 888',
+            
+                            'Оперативна пам\'ять: 8 ГБ',
+            
+                            'Вбудована пам\'ять: 128 ГБ',
+            
+                            'Камера: 64 Мп'
+            
+                        ] },
+            
+                
+                { id: 2, name: 'MacBook Air 13', price: 36800, category: 'laptop', image: 'images/mac.jpg', description: 'Легкий та потужний ноутбук для роботи та розваг.',
+        
+                    features: [
+        
+                        'Діагональ екрану 13,3',
+        
+                        'Процесор: Intel Core 7',
+        
+                        'Оперативна пам\'ять: 8 ГБ',
+        
+                        'Вбудована пам\'ять: 256 ГБ SSD',
+        
+                        'Відеокарта: Intel Iris Xe Graphics'
+        
+                    ]
+        
+                },
+        
+                { id: 3, name: 'Xiaome Tv A Pro32', price: 22200, category: 'tv', image: 'images/xiaomitv.jpg', description: 'Великий телевізор з високою роздільною здатністю для кіноперегляду.', features: [
+        
+                        'Діагональ: 55"',
+        
+                        'Роздільна здатність: 4K UHD',
+        
+                        'Технологія: LED',
+        
+                        'Smart TV: Так',
+        
+                        'HDR: Так'
+        
+                    ] },
+        
+                { id: 4, name: 'Asus Zenbook S16', price: 26500, category: 'laptop', image: 'images/asus.jpg', description: 'Ноутбук з потужною відеокартою для ігор.', features: [
+        
+                        'Екран: 15.6" IPS',
+        
+                        'Процесор: AMD Ryzen 7',
+        
+                        'Оперативна пам\'ять: 16 ГБ',
+        
+                        'Вбудована пам\'ять: 512 ГБ SSD',
+        
+                        'Відеокарта: NVIDIA GeForce RTX 3050'
+        
+                    ] },
+        
+                { id: 5, name: 'Xiaomi Redmi Note 14 ', price: 6000, category: 'smartphone', image: 'images/xiaomi.jpg', description: 'Акумулятор: 5500 (незнімний)Камера: 108 (f/1.7, ширококутна) + 2 ...Корпус: пластик;196,5 г;товщина 8,16 ммNFC: + (підтримку безконтактної оплати уточнюйте у магазинах)Рік 01.2025', features: [
+        
+                        'Екран: 6,67',
+        
+                        'AMOLED;2400х1080',
+        
+                        '120 Гц',
+        
+                        'Память: 256 ГБ',
+        
+                        'ОЗП: 8 ГБ'
+        
+                    ] },
+        
+                { id: 6, name: 'LED Ergo 32GPS', price: 11300, category: 'tv', image: 'images/led.jpg', description: 'Телевізор з підтримкою 4K та Smart TV.', features: [
+        
+                        'Діагональ: 60"',
+        
+                        'Роздільна здатність: 4K UHD',
+        
+                        'Технологія: QLED',
+        
+                        'Smart TV: Так',
+        
+                        'Частота оновлення: 120 Гц'
+        
+                    ] },
+        
+                { id: 7, name: 'Samsung Galaxy Book 5', price: 25020, category: 'laptop', image: 'images/sams.jpg', description: 'Ультрабук для бізнесу з високою автономністю.', features: [
+        
+                        'Екран: 13.3" IPS',
+        
+                        'Процесор: Intel Core i7',
+        
+                        'Оперативна пам\'ять: 16 ГБ',
+        
+                        'Вбудована пам\'ять: 512 ГБ SSD',
+        
+                        'Автономність: до 12 годин'
+        
+                    ] },
+        
+                { id: 8, name: 'Samsung', price: 8990, category: 'smartphone', image: 'images/samsung.jpg', description: 'Флагманський смартфон з передовою камерою та продуктивністю.', features: [
+        
+                           " Співвідношення сторін 20:9 Дисплей 6.6" ,
+            " PLS , сенсорний ємнісний Роздільна здатність екрану 2408x108  Матеріал екрану Скло"
+        
+                    ] },
+        
+                { id: 9, name: 'Xiaome TV A50', price: 51300, category: 'tv', image: 'images/tvx.jpg', description: 'Преміальний OLED телевізор з неперевершеною якістю зображення.', features: [
+        
+                        'Діагональ: 65"',
+        
+                        'Роздільна здатність: 4K UHD',
+        
+                        'Технологія: OLED',
+        
+                        'Smart TV: Так',
+        
+                        'Підтримка Dolby Vision'
+        
+                    ] },
+        
+                { id: 10, name: 'UD 32DW521', price: 17300, category: 'tv', image: 'images/ud.jpg', description: 'Доступний Smart TV з гарним співвідношенням ціни та якості.', features: [
+        
+                        'Діагональ: 43"',
+        
+                        'Роздільна здатність: Full HD',
+        
+                        'Технологія: LED',
+        
+                        'Smart TV: Так',
+        
+                        'Вбудовані динаміки: 20 Вт'
+        
+              ]
+     },
+     { id: 11, name: 'Lenovo Tab P12', price: 11300, category: 'tvs', image: 'images/lenovo.jpg', description: 'Крутий планшет від lenovo.', features: [
+        
+                        'Діагональ: 65"',
+        
+                        'Роздільна здатність: 4K UHD',
+        
+                        'Технологія: OLED',
+        
+                        'Smart TV: Так',
+        
+                        'Підтримка Dolby Vision'
+        
+                    ] }
+        
+        
+            ];
     initialProducts = [...products];
 
     const uniqueCategories = ['Усі товари', ...Array.from(new Set(products.map(product => product.category)))];
